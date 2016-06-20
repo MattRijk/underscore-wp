@@ -104,9 +104,11 @@ add_action( 'widgets_init', '_starter_widgets_init' );
 function _starter_scripts() {
 	wp_enqueue_style( '_starter-style', get_stylesheet_uri() );
 	
-	// Add Google Fonts: fira sans and merriweather
+//	Add Google Fonts: fira sans and merriweather
 	
-	wp_enqueue_style('_starter-google-fonts', 'https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,700,700italic|Merriweather:400,400italic,700,700italic');
+//	wp_enqueue_style('_starter-google-fonts', 'https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,700,700italic|Merriweather:400,400italic,700,700italic');
+
+	wp_enqueue_style('_starter-local-fonts', get_template_directory_uri() . '/fonts/custom-fonts.css');
 
 	wp_enqueue_script( '_starter-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
